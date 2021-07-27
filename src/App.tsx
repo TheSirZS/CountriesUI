@@ -9,15 +9,13 @@ import {
 
 import { HomeScreen } from "./screens/HomeScreen";
 
-export const App: React.FC = () => {
-	return (
-		<Router>
-			<>
-				<Switch>
-					<Route exact path={"/"} component={HomeScreen} />
-					<Redirect to={"/"} />
-				</Switch>
-			</>
-		</Router>
-	);
-};
+export const App: React.FC = () => (
+	<Router>
+		<>
+			<Switch>
+				<Route exact path={"/"} component={HomeScreen} />
+				<Redirect to={"/"} />
+			</Switch>
+		</>
+	</Router>
+);

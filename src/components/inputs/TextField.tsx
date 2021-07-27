@@ -30,7 +30,7 @@ export const TextField: React.FC<TextFieldProps> = ({
 			onChange={onChange}
 			autoComplete={"off"}
 			placeholder={placeholder}
-			className="transition duration-500 ease-in-out transform rounded-full w-full p-4 lg:text-base sm:text-sm text-xs text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500"
+			className="transition duration-500 ease-in-out transform rounded-full w-full p-4 lg:text-base sm:text-sm text-xs text-gray-500 font-semibold leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500"
 		/>
 	</div>
 );
