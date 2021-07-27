@@ -5,6 +5,7 @@ import { XIcon } from "@heroicons/react/outline";
 import { Country } from "../../models/country.model";
 
 import { Dialog, Transition } from "@headlessui/react";
+
 import { DetailScreen } from "../../screens/DetailScreen";
 
 type SidebarProps = {

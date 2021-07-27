@@ -34,14 +34,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 					type={"text"}
 					name={"search"}
 					onChange={onChange}
-					placeholder="Enter the name or code of a country..."
+					placeholder="Type some characteristic of a country..."
 					icon={<SearchIcon className="h-6 w-6" aria-hidden="true" />}
 				/>
 			</div>
 			<div className="flex w-full">
 				<LazyLoadImage
 					className={"object-cover w-full"}
-					alt={"Search"}
+					alt={"Hero logo"}
 					src={LOGO}
 				/>
 			</div>

@@ -18,7 +18,9 @@ export const DetailScreen: React.FC<DetailScreenProps> = ({ country }) => {
 			</div>
 			<div className="mt-6 relative flex-1 px-4 sm:px-6">
 				{country == null && (
-					<div className="flex justify-center items-center"></div>
+					<div className="flex h-screen justify-center items-center">
+						<h1>Hola</h1>
+					</div>
 				)}
 			</div>
 		</div>

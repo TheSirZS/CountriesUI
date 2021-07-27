@@ -10,6 +10,7 @@ import { Country } from "../models/country.model";
 
 import { GET_COUNTRIES } from "../graphql/queries";
 
+import { Footer } from "../components/footer/Footer";
 import { Sidebar } from "../components/navigation/Sidebar";
 import { HeroSection } from "../components/screens/home/HeroSection";
 import { CountriesSection } from "../components/screens/home/CountriesSection";
@@ -30,8 +31,13 @@ export const HomeScreen: React.FC = () => {
 			const filter = search.toLowerCase();
 			const results = data.countries.filter(
 				(country: Country) =>
-					country.name.toLowerCase().indexOf(filter) > -1 ||
-					country.code.toLowerCase().indexOf(filter) > -1
+					country.name?.toLowerCase().includes(filter) ||
+					country.code?.toLowerCase().includes(filter) ||
+					country.currency?.toLowerCase().includes(filter) ||
+					country.continent?.name?.toLowerCase().includes(filter) ||
+					country.languages?.some((language) =>
+						language.name?.toLowerCase().includes(filter)
+					)
 			);
 			setResults(results);
 		}
@@ -55,6 +61,7 @@ export const HomeScreen: React.FC = () => {
 				isTyping={search !== ""}
 				countries={results?.length === 0 ? data.countrie : results}
 			/>
+			<Footer />
 		</>
 	);
 };
