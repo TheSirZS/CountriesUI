@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/client";
 
 import { useForm } from "../hooks/useForm";
 
+import { ErrorScreen } from "./ErrorScreen";
 import { LoadingScreen } from "./LoadingScreen";
 
 import { Country } from "../models/country.model";
@@ -22,7 +23,7 @@ export const HomeScreen: React.FC = () => {
 
 	const { search } = formState;
 
-	const { loading, data } = useQuery(GET_COUNTRIES, {
+	const { loading, error, data } = useQuery(GET_COUNTRIES, {
 		fetchPolicy: "cache-first",
 	});
 
@@ -44,6 +45,7 @@ export const HomeScreen: React.FC = () => {
 	}, [data, search]);
 
 	if (loading) return <LoadingScreen />;
+	if (error) return <ErrorScreen error={error} />;
 
 	return (
 		<>

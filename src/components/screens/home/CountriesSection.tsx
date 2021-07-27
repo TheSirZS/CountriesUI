@@ -20,7 +20,7 @@ export const CountriesSection: React.FC<CountriesSectionProps> = ({
 }) => (
 	<div className="container py-6 mx-auto px-4 md:px-12">
 		<div className="flex justify-center items-center mb-6">
-			<h1 className="text-3xl lg:text-4xl font-medium text-center text-gray-500 leading-normal">
+			<h1 className="text-3xl lg:text-4xl font-semibold text-center text-gray-500 leading-normal">
 				{!isTyping
 					? "Search and know more about a country"
 					: `${

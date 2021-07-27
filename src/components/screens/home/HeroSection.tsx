@@ -20,7 +20,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 	<div className="max-w-screen-xl sm:mt-6 lg:px-6 xl:px-12 mx-auto">
 		<div className="grid grid-flow-row lg:grid-flow-col md:grid-rows-1 sm:grid-cols-2 gap-8 py-6">
 			<div className=" flex flex-col justify-center row-start-2 items-start sm:row-start-1">
-				<h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black leading-normal">
+				<h1 className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-black leading-normal">
 					Find everything about a country with{" "}
 					<strong>Countries GraphQL API</strong>.
 				</h1>
@@ -38,7 +38,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 					icon={<SearchIcon className="h-6 w-6" aria-hidden="true" />}
 				/>
 			</div>
-			<div className="flex w-full">
+			<div className="flex w-full h-full">
 				<LazyLoadImage
 					className={"object-cover w-full"}
 					alt={"Hero logo"}
